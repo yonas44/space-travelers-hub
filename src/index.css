@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.navbar,
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li,
+a {
+  padding: 10px;
+  text-decoration: none;
+  color: #167bfe;
+}
+
+.header-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
