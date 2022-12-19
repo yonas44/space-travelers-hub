@@ -1,0 +1,20 @@
+.profile-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.mission-table,
+.rocket-table {
+  width: 500px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+table td {
+  border: 1px solid lightgray;
+  text-align: left;
+  padding: 20px;
+}
