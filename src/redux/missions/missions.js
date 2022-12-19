@@ -3,10 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const missionsSlice = createSlice({
   name: 'missions',
   initialState: {
-    missions: [],
-  },
-  reducers: {
-    joinMission: (state, action) => ({ ...state, joined: action.payload }),
+    allMissions: [],
   },
 });
 

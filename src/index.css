@@ -21,6 +21,10 @@ a {
   color: #167bfe;
 }
 
+.link-active {
+  text-decoration: underline;
+}
+
 .header-title {
   display: flex;
   gap: 1rem;
