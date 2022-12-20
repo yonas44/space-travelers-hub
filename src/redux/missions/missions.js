@@ -5,6 +5,16 @@ const missionsSlice = createSlice({
   initialState: {
     allMissions: [],
   },
+  reducers: {
+    joinMission: (state, actions) => {
+      state.allMissions.map((mission) => {
+        if (mission.mission_id === actions.payload.id) {
+          return { ...mission, joined: !mission.joined ?? true };
+        }
+        return state;
+      });
+    },
+  },
 });
 
 export const { joinMission } = missionsSlice.actions;

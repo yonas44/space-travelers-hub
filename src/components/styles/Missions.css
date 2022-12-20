@@ -1,0 +1,43 @@
+.missions-holder {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.mission-table {
+  border-collapse: collapse;
+}
+
+.mission-table thead {
+  font-weight: bold;
+}
+
+.mission-table td {
+  display: flex;
+  padding: 10px;
+  border: 1px solid lightgray;
+  text-align: left;
+}
+
+.missions-head tr,
+.missions-body tr {
+  display: grid;
+  grid-template-columns: 10% 60% 15% 15%;
+}
+
+#status-btn {
+  font-size: 14px;
+  padding: 0 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: grey;
+  color: white;
+  margin: auto auto;
+}
+
+#join-btn {
+  margin: auto auto;
+  background-color: transparent;
+  color: grey;
+  padding: 8px 14px;
+  border: 1px solid grey;
+}

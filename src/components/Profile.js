@@ -5,7 +5,7 @@ const ProfilePage = () => (
   <div className="profile-wrapper">
     <div className="mission-section">
       <h3>My Missions</h3>
-      <table className="mission-table">
+      <table className="profile-table">
         <tbody>
           <tr>
             <td>first</td>
