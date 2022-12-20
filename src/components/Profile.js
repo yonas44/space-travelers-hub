@@ -4,13 +4,15 @@ import { useSelector } from 'react-redux';
 
 const ProfilePage = () => {
   const missions = useSelector((state) => state.missions.allMissions);
+  const reservedMissions = missions.filter((mission) => mission.reserved);
+
   return (
     <div className="profile-wrapper">
       <div className="mission-section">
         <h3>My Missions</h3>
         <table className="profile-table">
           <tbody>
-            {missions.map((mission) => (
+            {reservedMissions.map((mission) => (
               <tr key={mission.mission_id}>
                 <td>{mission.mission_name}</td>
               </tr>
