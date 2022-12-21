@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ProfilePage from './components/Profile';
 import MissionsPage from './components/Missions';
+import RocketList from './components/RocketList';
 import Navbar from './components/Navbar';
 import { getMissions } from './redux/missions/missions';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,11 +15,12 @@ function App() {
   useEffect(() => {
     if (missions.length === 0) dispatch(getMissions());
   }, [dispatch, missions.length]);
-
   return (
     <div className="App">
       <Routes>
         <Route element={<Navbar />} exact path="/">
+          <Route element={<RocketList />} path="/" />
+          <Route element={<MissionsPage />} path="/missions" />
           <Route element={<ProfilePage />} path="/profile" />
           <Route element={<MissionsPage />} path="/missions" />
         </Route>
