@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 
 const ProfilePage = () => {
   const missions = useSelector((state) => state.missions.allMissions);
+  const rockets = useSelector((state) => state.rockets.allRockets);
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved);
   const reservedMissions = missions.filter((mission) => mission.reserved);
 
   return (
@@ -21,15 +23,16 @@ const ProfilePage = () => {
         </table>
       </div>
       <div>
-        <h3>My Rockets</h3>
+        <h3 className="rockets">My Rockets</h3>
         <table className="rocket-table">
           <tbody>
-            <tr>
-              <td>Falcon 9</td>
-            </tr>
-            <tr>
-              <td>Falcon heavy</td>
-            </tr>
+            {
+              reservedRockets.map((rocket) => (
+                <tr key={rocket.id}>
+                  <td>{rocket.rocket_name}</td>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
       </div>

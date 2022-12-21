@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ProfilePage from './components/Profile';
 import MissionsPage from './components/Missions';
+import RocketList from './components/RocketList';
 import Navbar from './components/Navbar';
 import { getMissions } from './redux/missions/missions';
 import 'bootstrap/dist/css/bootstrap.min.css';

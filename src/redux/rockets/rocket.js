@@ -2,9 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const ROCKET_API = 'https://api.spacexdata.com/v3/rockets';
-const initialState = {
-  allRockets: [],
-};
 
 export const fetchRockets = createAsyncThunk('rocket/fetchRockets',
   async () => {
@@ -15,7 +12,26 @@ export const fetchRockets = createAsyncThunk('rocket/fetchRockets',
 
 const rocketSlice = createSlice({
   name: 'rocket',
-  initialState,
+  initialState: {
+    allRockets: [],
+  },
+  reducers: {
+    reserveRocket: (state, actions) => {
+      const newRockets = state.allRockets.map((rocket) => {
+        if (rocket.id === actions.payload) {
+          return {
+            ...rocket,
+            reserved: !rocket.reserved,
+          };
+        }
+        return { ...rocket };
+      });
+      return {
+        ...state,
+        allRockets: newRockets,
+      };
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => ({
       ...state,
@@ -24,11 +40,14 @@ const rocketSlice = createSlice({
           id: rocket.id,
           rocket_name: rocket.rocket_name,
           description: rocket.description,
-          flickr_images: rocket.flickr_images,
+          flickr_images: rocket.flickr_images[1],
+          reserved: false,
         })),
       ],
     }));
   },
 });
+
+export const { reserveRocket } = rocketSlice.actions;
 
 export default rocketSlice.reducer;

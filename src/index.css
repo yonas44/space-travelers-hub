@@ -26,6 +26,9 @@ a {
 
 .link-active {
   text-decoration: underline;
+  background-color: #167bfe;
+  color: #fff;
+  border-radius: 5px;
 }
 
 .header-title {
@@ -57,13 +60,23 @@ a {
   .reserve-btn {
     margin-bottom: 20px;
   }
+
+  .profile-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    /* margin-left: 10%; */
+    justify-content: center;
+
+    /* align-items: center; */
+  }
 }
 
 .main-container {
   margin: auto 29px;
 }
 
-.reserve-btn {
+#reserve-btn {
   background-color: #167bfe;
   padding: 10px;
   cursor: pointer;
@@ -71,4 +84,17 @@ a {
   color: #fff;
   border: none;
   margin-top: 10px;
+}
+
+.reserved-button {
+  background-color: red !important;
+  color: #fff !important;
+}
+
+.check-status {
+  background-color: #23a2b8;
+  color: #fff;
+  padding: 2px;
+  border-radius: 4px;
+  margin-right: 5px;
 }
