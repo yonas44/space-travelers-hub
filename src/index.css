@@ -17,6 +17,16 @@
   list-style: none;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 .nav-links li,
 a {
   padding: 10px;
@@ -32,4 +42,9 @@ a {
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+
+.components-holder {
+  display: flex;
+  flex-direction: column;
 }
