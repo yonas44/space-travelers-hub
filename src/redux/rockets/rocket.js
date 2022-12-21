@@ -14,6 +14,8 @@ const rocketSlice = createSlice({
   name: 'rocket',
   initialState: {
     allRockets: [],
+    loading: false,
+    error: '',
   },
   reducers: {
     reserveRocket: (state, actions) => {
