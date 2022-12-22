@@ -2,8 +2,9 @@
   display: flex;
   position: absolute;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   top: 0;
+  gap: 50px;
   z-index: -1;
   width: 100%;
   padding: 10%;
@@ -13,20 +14,9 @@
   background-position: center;
 }
 
-.profile-table,
-.mission-section h3,
-.rocket-table,
-.rockets {
+.mission-table,
+.rocket-table {
   width: 100%;
-  margin: auto 10px;
-  margin-bottom: 4px;
-}
-
-@media screen and (min-width: 50em) {
-  .profile-table,
-  .rocket-table {
-    width: 500px;
-  }
 }
 
 table {
@@ -97,6 +87,12 @@ table {
   .profile-wrapper {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .rocket-table,
+  .mission-table {
+    margin-top: 10px;
+    width: 100%;
   }
 
   .mission-section,

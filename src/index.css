@@ -74,6 +74,12 @@ p,
   color: #fff;
 }
 
+footer {
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+}
+
 @media screen and (max-width: 500px) {
   .rockets {
     display: flex;
@@ -103,7 +109,7 @@ p,
 }
 
 .main-container {
-  margin: auto 29px;
+  margin: 150px 29px 0 29px;
 }
 
 #reserve-btn {
@@ -131,9 +137,10 @@ p,
 
 .no-rockets {
   background-color: rgb(116, 162, 116);
-  margin-top: 10px;
   padding: 5px;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
   border-radius: 5px;
 }
 
