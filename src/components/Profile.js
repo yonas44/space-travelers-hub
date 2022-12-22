@@ -11,14 +11,20 @@ const ProfilePage = () => {
   return (
     <div className="profile-wrapper">
       <div className="mission-section">
-        <h3>My Missions</h3>
+        <h3 className="rockets">My Missions</h3>
         <table className="profile-table">
           <tbody>
-            {reservedMissions.map((mission) => (
-              <tr key={mission.mission_id}>
-                <td>{mission.mission_name}</td>
-              </tr>
-            ))}
+            {
+            reservedMissions.length > 0 ? (
+              reservedMissions.map((mission) => (
+                <tr key={mission.mission_id}>
+                  <td className="no-rockets">{mission.mission_name}</td>
+                </tr>
+              ))
+            ) : (
+              <p className="no-rockets">No missions</p>
+            )
+           }
           </tbody>
         </table>
       </div>
@@ -27,11 +33,15 @@ const ProfilePage = () => {
         <table className="rocket-table">
           <tbody>
             {
-              reservedRockets.map((rocket) => (
-                <tr key={rocket.id}>
-                  <td>{rocket.rocket_name}</td>
-                </tr>
-              ))
+              reservedRockets.length > 0 ? (
+                reservedRockets.map((rocket) => (
+                  <tr key={rocket.id}>
+                    <td className="no-rockets">{rocket.rocket_name}</td>
+                  </tr>
+                ))
+              ) : (
+                <p className="no-rockets">No reservations</p>
+              )
             }
           </tbody>
         </table>
