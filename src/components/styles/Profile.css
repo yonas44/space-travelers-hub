@@ -1,11 +1,8 @@
 .profile-wrapper {
   display: flex;
-  position: absolute;
   flex-direction: column;
   justify-content: center;
-  top: 0;
   gap: 50px;
-  z-index: -1;
   width: 100%;
   padding: 10%;
   min-height: 100vh;
@@ -49,6 +46,7 @@ table {
 
 .joined-missions {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }

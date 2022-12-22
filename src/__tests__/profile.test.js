@@ -1,25 +1,24 @@
-import React from 'react';
+import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import { render, screen } from '@testing-library/react';
 import store from '../redux/configureStore';
-import RocketList from '../components/RocketList';
+import ProfilePage from '../components/Profile';
 
-describe('Testing rocket component', () => {
-  test('renders correctly', () => {
+describe('Profile loads', () => {
+  test('the component renders', () => {
     render(
       <Provider store={store}>
-        <RocketList />
+        <ProfilePage />
       </Provider>,
     );
-    expect(screen.getByTestId('rockets')).toBeInTheDocument();
+    expect(screen.getByText(/My Missions/)).toBeInTheDocument();
   });
 
   test('matches snapshot', () => {
     const renderComponents = renderer
       .create(
         <Provider store={store}>
-          <RocketList />
+          <ProfilePage />
         </Provider>,
       )
       .toJSON();

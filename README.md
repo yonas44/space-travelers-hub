@@ -31,25 +31,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<p align="center">
-  <img style="width: 80%;" src="./src/Assets/big1.png" />
-</p>
-
-<div align="center">
-
-  <span align="left" style="width: 250px;">
-     <img style="width: 200px;" src="./src/Assets/small 1.png" />
-  </span>
-
-  <span align="right">
-     <img style="width: 200px;" src="./src/Assets/small 2.png" />
-  </span>
-</div>
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 SPACE TRAVELERS HUB <a name="about-project"></a>
 
-This is an application that will allow users to book rockets and join selected space missions.
+This is an application that will allow users to book rockets and join selected space missions which is built with React and Redux.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,7 +56,8 @@ This is an application that will allow users to book rockets and join selected s
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://www.themoviedb.org/">themoviedb API</a></li>
+    <li><a href="https://api.spacexdata.com/v3/rockets">SpaceX/Rockets</a></li>
+    <li><a href="https://api.spacexdata.com/v3/missions">SpaceX/Missions</a></li>
   </ul>
 </details>
 
@@ -87,7 +74,7 @@ This is an application that will allow users to book rockets and join selected s
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://spacex-hub.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,7 +96,8 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-`cd [your-folder] https://github.com/yonas44/space-travelers-hub.git`
+- run `git clone https://github.com/yonas44/space-travelers-hub.git`
+- run `cd space-travelers-hub`
 
 ### Install
 
@@ -157,8 +145,7 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add count for other navigation links
-- [ ] Add TV shows page
+- [ ] Add counter for corresponding naviagation links indicating the number of rocket/ missions.
 - [ ] Add about page
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

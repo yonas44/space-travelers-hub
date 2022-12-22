@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile loads matches snapshot 1`] = `
+<div
+  className="profile-wrapper"
+>
+  <div
+    className="mission-section"
+  >
+    <h3
+      className="rockets"
+    >
+      My Missions
+    </h3>
+    <table
+      className="mission-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="empty-mission"
+          >
+            You have not joined any mission yet!
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    className="rockets-section"
+  >
+    <h3>
+      My Rockets
+    </h3>
+    <table
+      className="rocket-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="no-rockets"
+          >
+            No reservations
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

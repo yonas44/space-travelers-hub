@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions loads matches snapshot 1`] = `
+<div
+  className="missions-holder"
+>
+  <table
+    className="table table-striped mission-table"
+  >
+    <thead
+      className="missions-head"
+    >
+      <tr>
+        <td
+          className="text"
+        >
+          Mission
+        </td>
+        <td
+          className="text"
+        >
+          Description
+        </td>
+        <td
+          className="text"
+        >
+          Status
+        </td>
+        <td
+          className="text"
+        >
+           
+        </td>
+      </tr>
+    </thead>
+    <tbody
+      className="missions-body"
+    />
+  </table>
+</div>
+`;

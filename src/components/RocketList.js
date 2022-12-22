@@ -17,7 +17,7 @@ const RocketList = () => {
   };
 
   return (
-    <div className="main-container">
+    <div data-testid="rockets" className="main-container">
       {loading && <div className="animate" />}
       {allRockets.map((rocket) => (
         <Rocket rocket={rocket} key={rocket.id} handleChange={handleChange} />
