@@ -5,6 +5,7 @@ import Rocket from './Rocket';
 
 const RocketList = () => {
   const rockets = useSelector((state) => state.rockets.allRockets);
+  const loading = rockets;
   const dispatch = useDispatch();
   useEffect(() => {
     if (rockets.length === 0) {
@@ -18,6 +19,7 @@ const RocketList = () => {
 
   return (
     <div className="main-container">
+      {loading && <div className="animate" />}
       {rockets.map((rocket) => (
         <Rocket rocket={rocket} key={rocket.id} handleChange={handleChange} />
       ))}

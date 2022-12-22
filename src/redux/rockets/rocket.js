@@ -47,6 +47,10 @@ const rocketSlice = createSlice({
         })),
       ],
     }));
+    builder.addCase(fetchRockets.pending, (state) => {
+      const assignState = state;
+      assignState.loading = true;
+    });
   },
 });
 
