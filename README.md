@@ -74,7 +74,7 @@ This is an application that will allow users to book rockets and join selected s
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://spacex-hub.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
