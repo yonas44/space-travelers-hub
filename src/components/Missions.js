@@ -16,17 +16,17 @@ const MissionsPage = () => {
       <table className="table table-striped mission-table">
         <thead className="missions-head">
           <tr>
-            <td>Mission</td>
-            <td>Description</td>
-            <td>Status</td>
-            <td> </td>
+            <td className="text">Mission</td>
+            <td className="text">Description</td>
+            <td className="text">Status</td>
+            <td className="text"> </td>
           </tr>
         </thead>
         <tbody className="missions-body">
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
-              <td style={{ fontWeight: 'bold' }}>{mission.mission_name}</td>
-              <td>{mission.description}</td>
+              <td style={{ fontWeight: 'bold' }} className="text">{mission.mission_name}</td>
+              <td className="text">{mission.description}</td>
               <td>
                 <span id="status" className={mission.reserved ? 'reserved' : ''}>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</span>
               </td>
