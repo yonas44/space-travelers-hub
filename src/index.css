@@ -21,6 +21,16 @@ body {
   list-style: none;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 .nav-links li,
 a {
   padding: 10px;
@@ -41,6 +51,11 @@ a {
   align-items: center;
 }
 
+.components-holder {
+  display: flex;
+  flex-direction: column;
+}
+
 .description h1,
 p,
 .title {
@@ -57,6 +72,12 @@ p,
 
 .text {
   color: #fff;
+}
+
+footer {
+  margin-top: 100px;
+  color: white;
+  text-align: center;
 }
 
 @media screen and (max-width: 500px) {
@@ -88,7 +109,7 @@ p,
 }
 
 .main-container {
-  margin: auto 29px;
+  margin: 150px 29px 0 29px;
 }
 
 #reserve-btn {
@@ -116,9 +137,10 @@ p,
 
 .no-rockets {
   background-color: rgb(116, 162, 116);
-  margin-top: 10px;
   padding: 5px;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
   border-radius: 5px;
 }
 
@@ -135,6 +157,11 @@ p,
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

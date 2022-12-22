@@ -1,9 +1,17 @@
 .missions-holder {
-  width: 90%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  padding: 10%;
   margin: 0 auto;
+  background-image: url(../../images/nasa-yZygONrUBe8-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .mission-table {
+  backdrop-filter: blur(15px);
   border-collapse: collapse;
 }
 
@@ -40,9 +48,8 @@
 #join-btn {
   margin: auto auto;
   background-color: transparent;
-  color: grey;
   padding: 8px 14px;
-  border: 1px solid grey;
+  border: 1px solid black;
 }
 
 .reserved-btn {

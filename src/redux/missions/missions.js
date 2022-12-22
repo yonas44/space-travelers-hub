@@ -8,6 +8,7 @@ export const getMissions = createAsyncThunk('fetchMissions', async () => axios
 const missionsSlice = createSlice({
   name: 'missions',
   initialState: {
+    loading: false,
     allMissions: [],
   },
   reducers: {
@@ -24,14 +25,21 @@ const missionsSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getMissions.fulfilled, (state, actions) => ({
       ...state,
+      loading: false,
       allMissions: [
         ...actions.payload.map((mission) => ({
           mission_id: mission.mission_id,
           mission_name: mission.mission_name,
           description: mission.description,
+          info: mission.wikipedia,
           reserved: false,
         })),
       ],
+    }));
+
+    builder.addCase(getMissions.pending, (state) => ({
+      ...state,
+      loading: true,
     }));
   },
 });

@@ -1,11 +1,12 @@
 // import { Link } from 'react-router-dom';
 import { NavLink, Outlet } from 'react-router-dom';
 import Planet from '../images/planetImg.png';
+import Footer from './Footer';
 
 const Navbar = () => {
   const x = 'Space Travelers Hub';
   return (
-    <div>
+    <div className="components-holder">
       <nav className="navbar">
         <div className="header-title">
           <img alt="planet logo" src={Planet} height={50} width={50} />
@@ -39,6 +40,7 @@ const Navbar = () => {
         </ul>
       </nav>
       <Outlet />
+      <Footer />
     </div>
   );
 };

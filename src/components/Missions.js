@@ -4,7 +4,7 @@ import './styles/Missions.css';
 import { joinMission } from '../redux/missions/missions';
 
 const MissionsPage = () => {
-  const missions = useSelector((state) => state.missions.allMissions);
+  const { loading, allMissions } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   const handleClick = (id) => {
@@ -13,6 +13,7 @@ const MissionsPage = () => {
 
   return (
     <div className="missions-holder">
+      {loading && <div className="animate" />}
       <table className="table table-striped mission-table">
         <thead className="missions-head">
           <tr>
@@ -23,7 +24,7 @@ const MissionsPage = () => {
           </tr>
         </thead>
         <tbody className="missions-body">
-          {missions.map((mission) => (
+          {allMissions.map((mission) => (
             <tr key={mission.mission_id}>
               <td style={{ fontWeight: 'bold' }} className="text">{mission.mission_name}</td>
               <td className="text">{mission.description}</td>
