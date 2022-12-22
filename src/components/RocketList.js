@@ -4,8 +4,9 @@ import { fetchRockets, reserveRocket } from '../redux/rockets/rocket';
 import Rocket from './Rocket';
 
 const RocketList = () => {
-  const rockets = useSelector((state) => state.rockets.allRockets);
-  const loading = rockets;
+  const [loading, rockets] = useSelector((state) => state.rockets.allRockets);
+  console.log('i am', loading);
+  // const loading = rockets;
   const dispatch = useDispatch();
   useEffect(() => {
     if (rockets.length === 0) {
