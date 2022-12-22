@@ -3,11 +3,19 @@ import PropTypes from 'prop-types';
 const Rocket = ({ rocket, handleChange }) => (
   <>
     <div className="rockets">
-      <img className="rocket-img" src={rocket.flickr_images} height={150} width={200} alt="rocket" />
+      <img
+        className="rocket-img"
+        src={rocket.flickr_images}
+        height={150}
+        width={200}
+        alt="rocket"
+      />
       <div className="description">
         <h1>{rocket.rocket_name}</h1>
         <p>
-          <span className={rocket.reserved ? 'check-status' : ''}>{rocket.reserved ? 'Reserved' : ''}</span>
+          <span className={rocket.reserved ? 'check-status' : ''}>
+            {rocket.reserved ? 'Reserved' : ''}
+          </span>
           {rocket.description}
         </p>
         <button

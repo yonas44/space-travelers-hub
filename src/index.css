@@ -8,7 +8,8 @@
 }
 
 body {
-  background: url(images/space\ BG.jpeg);
+  background: linear-gradient(black, rgba(255, 255, 255, 0.208), black), url(images/space\ BG.jpeg);
+  background-size: cover;
 }
 
 .navbar,
@@ -24,6 +25,7 @@ body {
 .navbar {
   position: fixed;
   top: 0;
+  z-index: 2;
   width: 100%;
   backdrop-filter: blur(8px);
   border-bottom: 1px solid grey;
@@ -35,7 +37,7 @@ body {
 a {
   padding: 10px;
   text-decoration: none;
-  color: #167bfe;
+  color: white;
 }
 
 .link-active {
@@ -52,6 +54,7 @@ a {
 }
 
 .components-holder {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -70,11 +73,10 @@ p,
   margin-bottom: 5px;
 }
 
-.text {
-  color: #fff;
-}
-
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   margin-top: 100px;
   color: white;
   text-align: center;
@@ -100,16 +102,12 @@ footer {
   .profile-wrapper {
     display: flex;
     flex-direction: column;
-
-    /* margin-left: 10%; */
     justify-content: center;
-
-    /* align-items: center; */
   }
 }
 
 .main-container {
-  margin: 150px 29px 0 29px;
+  margin: 150px 29px 100px 29px;
 }
 
 #reserve-btn {

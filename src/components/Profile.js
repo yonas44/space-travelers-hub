@@ -63,7 +63,7 @@ const ProfilePage = () => {
         </table>
       </div>
       <div className="rockets-section">
-        <h3>My Rockets</h3>
+        <h3 className="rockets">My Rockets</h3>
         <table className="rocket-table">
           <tbody>
             {reservedRockets.length > 0 ? (
