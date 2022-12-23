@@ -14,6 +14,7 @@
 .mission-table,
 .rocket-table {
   width: 100%;
+  background-color: gray;
 }
 
 table {
@@ -21,7 +22,7 @@ table {
   border-collapse: collapse;
 }
 
-.profile-table td,
+.mission-table td,
 .rocket-table td {
   border: 1px solid lightgray;
   padding: 10px;
@@ -30,6 +31,7 @@ table {
 .empty-mission {
   color: white;
   background-color: grey;
+  padding: 10px;
   opacity: 0;
   animation: fadeIn 1s forwards;
 }

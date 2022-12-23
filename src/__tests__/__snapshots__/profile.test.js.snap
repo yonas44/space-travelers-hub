@@ -29,7 +29,9 @@ exports[`Profile loads matches snapshot 1`] = `
   <div
     className="rockets-section"
   >
-    <h3>
+    <h3
+      className="rockets"
+    >
       My Rockets
     </h3>
     <table

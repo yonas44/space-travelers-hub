@@ -12,7 +12,12 @@ body {
   background-size: cover;
 }
 
-.navbar,
+body::before {
+  display: block;
+  height: 150px;
+  content: "";
+}
+
 .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -20,6 +25,21 @@ body {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+}
+
+#burger-menu {
+  background: transparent;
+  border: none;
+  height: 50px;
+  z-index: 8;
+  position: fixed;
+  top: 20px;
+  cursor: pointer;
+  padding: 0 10px;
+  display: none;
+  justify-content: left;
+  align-items: center;
+  transition: all 0.5s;
 }
 
 .navbar {
@@ -49,8 +69,14 @@ a {
 
 .header-title {
   display: flex;
+  margin-left: 100px;
   gap: 1rem;
   align-items: center;
+}
+
+.open {
+  display: flex !important;
+  animation: fade 0.5s forwards ease-out;
 }
 
 .components-holder {
@@ -82,7 +108,15 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  #burger-menu {
+    display: flex;
+  }
+
   .rockets {
     display: flex;
     flex-direction: column;
@@ -107,7 +141,7 @@ footer {
 }
 
 .main-container {
-  margin: 150px 29px 100px 29px;
+  margin: 0  29px 100px 29px;
 }
 
 #reserve-btn {

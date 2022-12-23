@@ -5,7 +5,7 @@ exports[`Missions loads matches snapshot 1`] = `
   className="missions-holder"
 >
   <table
-    className="table table-striped mission-table"
+    className="table-mission"
   >
     <thead
       className="missions-head"

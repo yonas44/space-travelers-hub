@@ -14,7 +14,7 @@ const MissionsPage = () => {
   return (
     <div className="missions-holder">
       {loading && <div className="animate" />}
-      <table className="table table-striped mission-table">
+      <table className="table-mission">
         <thead className="missions-head">
           <tr>
             <td className="text">Mission</td>

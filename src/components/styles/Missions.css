@@ -2,24 +2,26 @@
   width: 100%;
   position: relative;
   top: 0;
-  padding: 10%;
   margin: 0 auto;
   background-image: url(../../images/nasa-yZygONrUBe8-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  overflow: auto;
 }
 
-.mission-table {
+.table-mission {
   background-color: rgba(211, 211, 211, 0.499);
   backdrop-filter: blur(15px);
   border-collapse: collapse;
+  margin: 0 auto 50px auto;
+  width: 1000px;
 }
 
-.mission-table thead {
+.table-mission thead {
   font-weight: bold;
 }
 
-.mission-table td {
+.table-mission td {
   display: flex;
   padding: 10px;
   border: 1px solid lightgray;
