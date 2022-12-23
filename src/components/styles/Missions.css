@@ -9,6 +9,11 @@
   background-position: center;
 }
 
+.table-wrapper {
+  border: 2px solid red;
+  overflow: auto;
+}
+
 .mission-table {
   background-color: rgba(211, 211, 211, 0.499);
   backdrop-filter: blur(15px);
