@@ -4,6 +4,9 @@ exports[`Missions loads matches snapshot 1`] = `
 <div
   className="missions-holder"
 >
+  <div
+    className="animate"
+  />
   <table
     className="table-mission"
   >
