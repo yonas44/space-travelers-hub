@@ -1,0 +1,101 @@
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  padding: 10%;
+  min-height: calc(100vh - 150px);
+  background-image: url(../../images/spacex--p-KCm6xB9I-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.mission-table,
+.rocket-table {
+  width: 100%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+.mission-table td,
+.rocket-table td {
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+.empty-mission {
+  color: white;
+  background-color: grey;
+  padding: 10px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.reserved-mission {
+  position: relative;
+  z-index: 2;
+}
+
+.joined-missions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.joined-missions::after {
+  content: '';
+  height: 100%;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  width: 0;
+  transition: all 1s ease-out;
+  background-color: lightgray;
+}
+
+.joined-missions:hover::after {
+  width: 100%;
+}
+
+#profile-mission-btn {
+  margin: 0;
+  background-color: transparent;
+  padding: 8px 14px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  color: white !important;
+}
+
+#profile-mission-btn:hover {
+  background-color: red;
+  color: white !important;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rocket-table,
+  .mission-table {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .mission-section,
+  .rockets-section {
+    width: 45%;
+  }
+}

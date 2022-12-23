@@ -1,0 +1,61 @@
+.missions-holder {
+  width: 100%;
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  background-image: url(../../images/nasa-yZygONrUBe8-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+}
+
+.table-mission {
+  background-color: rgba(211, 211, 211, 0.499);
+  backdrop-filter: blur(15px);
+  border-collapse: collapse;
+  margin: 0 auto 50px auto;
+  width: 1000px;
+}
+
+.table-mission thead {
+  font-weight: bold;
+}
+
+.table-mission td {
+  display: flex;
+  padding: 10px;
+  border: 1px solid lightgray;
+  text-align: left;
+}
+
+.missions-head tr,
+.missions-body tr {
+  display: grid;
+  grid-template-columns: 10% 60% 15% 15%;
+}
+
+#status {
+  font-size: 14px;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: grey;
+  color: white;
+  margin: auto auto;
+}
+
+.reserved {
+  background-color: rgb(52, 161, 168) !important;
+}
+
+#join-btn {
+  margin: auto auto;
+  background-color: transparent;
+  padding: 8px 14px;
+  color: black;
+  border: 1px solid black;
+}
+
+.reserved-btn {
+  color: rgb(184, 1, 1) !important;
+  border: 1px solid red !important;
+}
