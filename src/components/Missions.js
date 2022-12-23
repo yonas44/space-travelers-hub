@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './styles/Missions.css';
-import { joinMission } from '../redux/missions/missions';
+import { joinMission, getMissions } from '../redux/missions/missions';
 
 const MissionsPage = () => {
   const { loading, allMissions } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (allMissions.length === 0) dispatch(getMissions());
+  }, [dispatch, allMissions.length]);
   const handleClick = (id) => {
     dispatch(joinMission(id));
   };
