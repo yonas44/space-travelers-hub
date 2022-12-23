@@ -4,42 +4,38 @@ exports[`Missions loads matches snapshot 1`] = `
 <div
   className="missions-holder"
 >
-  <div
-    className="table-wrapper"
+  <table
+    className="table-mission"
   >
-    <table
-      className="table table-striped mission-table"
+    <thead
+      className="missions-head"
     >
-      <thead
-        className="missions-head"
-      >
-        <tr>
-          <td
-            className="text"
-          >
-            Mission
-          </td>
-          <td
-            className="text"
-          >
-            Description
-          </td>
-          <td
-            className="text"
-          >
-            Status
-          </td>
-          <td
-            className="text"
-          >
-             
-          </td>
-        </tr>
-      </thead>
-      <tbody
-        className="missions-body"
-      />
-    </table>
-  </div>
+      <tr>
+        <td
+          className="text"
+        >
+          Mission
+        </td>
+        <td
+          className="text"
+        >
+          Description
+        </td>
+        <td
+          className="text"
+        >
+          Status
+        </td>
+        <td
+          className="text"
+        >
+           
+        </td>
+      </tr>
+    </thead>
+    <tbody
+      className="missions-body"
+    />
+  </table>
 </div>
 `;

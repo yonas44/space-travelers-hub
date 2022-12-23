@@ -1,4 +1,4 @@
-import { fetchRockets, reserveRocket } from "../redux/rockets/rocket";
+import { fetchRockets, reserveRocket } from '../redux/rockets/rocket';
 
 describe('reducer should return list of rockets', () => {
   it('should return list of rockets in the state', () => {
