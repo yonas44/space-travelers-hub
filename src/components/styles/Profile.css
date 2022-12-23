@@ -14,7 +14,6 @@
 .mission-table,
 .rocket-table {
   width: 100%;
-  background-color: gray;
 }
 
 table {
@@ -44,6 +43,7 @@ table {
 
 .reserved-mission {
   position: relative;
+  z-index: 2;
 }
 
 .joined-missions {
@@ -57,10 +57,9 @@ table {
   content: '';
   height: 100%;
   left: 0;
-  overflow: hidden;
+  z-index: -1;
   position: absolute;
   width: 0;
-  z-index: -1;
   transition: all 1s ease-out;
   background-color: lightgray;
 }

@@ -14,7 +14,6 @@ function App() {
           <Route element={<RocketList />} path="/" />
           <Route element={<MissionsPage />} path="/missions" />
           <Route element={<ProfilePage />} path="/profile" />
-          <Route element={<MissionsPage />} path="/missions" />
         </Route>
       </Routes>
     </div>
